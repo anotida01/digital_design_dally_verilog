@@ -6,6 +6,7 @@ module dec_2_4 (
     assign out = 1 <<  in;    
 endmodule
 
+// 3 -> 8 decoder
 module dec_3_8 (
     input [2:0] in,
     output [7:0] out
@@ -13,12 +14,12 @@ module dec_3_8 (
     assign out = 1 <<  in;    
 endmodule
 
-module dec_5_32 (in, out);  
+// 5 -> 32 decoder using predecoders
+module dec_5_32 (
+    input [4:0] in, 
+    output [31:0] out
+);  
 
-    input [4:0] in;
-    output [31:0] out;
-
-    wire [31:0] out;
     wire [7:0] i;
     wire [3:0] j;
 

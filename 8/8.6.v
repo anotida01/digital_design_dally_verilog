@@ -1,3 +1,4 @@
+// 2 -> 4 decoder
 module dec_2_4 (
     input [1:0] in,
     output [3:0] out
@@ -5,6 +6,7 @@ module dec_2_4 (
     assign out = 1 <<  in;    
 endmodule
 
+// 6 -> 64 decoder using 2 -> 4 predecoders
 module dec_6_64 (
     input [5:0] in,
     output [63:0] out
